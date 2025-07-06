@@ -10,14 +10,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-dark': '#1a1b1e',
-        'primary-light': '#f8f9fa',
-        'accent': '#6366f1',
-        'accent-light': '#818cf8',
+        'primary-dark': '#2A2B2E',
+        'primary-light': '#D3D0CB',
+        'accent': '#2A2B2E',
+        'accent-light': '#3A3B3E',
       },
       fontFamily: {
-        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
-        'display': ['Playfair Display', 'Georgia', 'serif'],
+        'sans': ['SF Pro Display', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        'display': ['SF Pro Display', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',
