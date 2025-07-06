@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
           alt="Veterinary Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-primary-dark/60 backdrop-blur-[1px]"></div>
+        <div className="absolute inset-0 bg-primary-dark/70 backdrop-blur-[1px]"></div>
       </div>
 
       {/* Subtle Background Elements */}
@@ -53,7 +53,7 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.2, duration: 0.8 }}
               className="mb-12"
             >
-              <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-primary-light mb-6 tracking-tighter leading-none">
+              <h1 className="text-6xl md:text-8xl lg:text-9xl font-display font-black text-primary-light mb-6 tracking-tight leading-none">
                 VET_X PHARMA
               </h1>
             </motion.div>
@@ -64,10 +64,10 @@ const Hero: React.FC = () => {
               transition={{ delay: 0.5, duration: 0.8 }}
               className="mb-12"
             >
-              <p className="text-xl md:text-3xl lg:text-4xl text-primary-light/90 mb-6 font-light">
+              <p className="text-xl md:text-3xl lg:text-4xl text-primary-light/90 mb-6 font-light font-sans">
                 Premium Veterinary Pharmaceuticals
               </p>
-              <p className="text-base md:text-lg lg:text-xl text-primary-light/70 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-base md:text-lg lg:text-xl text-primary-light/70 max-w-3xl mx-auto leading-relaxed font-sans">
                 Trusted by veterinary professionals across Gujarat and beyond
               </p>
             </motion.div>
@@ -80,7 +80,7 @@ const Hero: React.FC = () => {
             >
               <Button 
                 onPress={scrollToProducts}
-                className="bg-primary-light text-primary-dark font-bold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 shadow-2xl"
+                className="bg-accent text-white font-semibold text-base md:text-lg px-8 md:px-12 py-4 md:py-6 shadow-2xl hover:bg-accent-light transition-all duration-300"
                 radius="full"
                 size="lg"
               >
@@ -89,7 +89,7 @@ const Hero: React.FC = () => {
               <Button 
                 variant="bordered"
                 onPress={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-                className="border-primary-light/50 text-primary-light font-semibold text-base md:text-lg px-8 md:px-12 py-4 md:py-6"
+                className="border-primary-light/50 text-primary-light font-medium text-base md:text-lg px-8 md:px-12 py-4 md:py-6 hover:bg-primary-light/10 transition-all duration-300"
                 radius="full"
                 size="lg"
               >

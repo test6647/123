@@ -10,11 +10,14 @@ export default {
   theme: {
     extend: {
       colors: {
-        'primary-dark': '#2A2B2E',
-        'primary-light': '#D3D0CB',
+        'primary-dark': '#1a1b1e',
+        'primary-light': '#f8f9fa',
+        'accent': '#6366f1',
+        'accent-light': '#818cf8',
       },
       fontFamily: {
-        'sans': ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
+        'sans': ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        'display': ['Playfair Display', 'Georgia', 'serif'],
       },
       animation: {
         'fade-in': 'fadeIn 0.8s ease-out',

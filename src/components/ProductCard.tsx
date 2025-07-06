@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Card, CardBody, CardHeader, Chip, Button } from '@heroui/react';
-import { ShoppingCart, Eye } from 'lucide-react';
+import { Eye, Package } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductCardProps {
@@ -17,16 +17,16 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
       transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
       className="h-full"
     >
-      <Card className="bg-primary-dark backdrop-blur-sm border-primary-dark/10 h-full group">
+      <Card className="bg-white backdrop-blur-sm border border-gray-200 h-full group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2">
         <CardHeader className="p-0 relative overflow-hidden">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-48 md:h-64 object-cover"
+            className="w-full h-48 md:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute top-4 right-4">
             <Chip 
-              className="bg-primary-light text-primary-dark font-bold text-base md:text-lg px-3 md:px-4 py-1 md:py-2"
+              className="bg-accent text-white font-bold text-base md:text-lg px-3 md:px-4 py-1 md:py-2 font-sans"
               radius="full"
             >
               ₹{product.price}
@@ -34,7 +34,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
           </div>
           <div className="absolute top-4 left-4">
             <Chip 
-              className="bg-primary-light/90 text-primary-dark font-medium"
+              className="bg-white/90 text-primary-dark font-medium font-sans"
               size="sm"
               radius="full"
             >
@@ -46,7 +46,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
           <div className="absolute inset-0 bg-primary-dark/80 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <Button
               isIconOnly
-              className="bg-primary-light text-primary-dark"
+              className="bg-accent text-white hover:bg-accent-light transition-colors duration-300"
               radius="full"
               size="lg"
             >
@@ -54,34 +54,34 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, index }) => {
             </Button>
             <Button
               isIconOnly
-              className="bg-primary-light text-primary-dark"
+              className="bg-white text-primary-dark hover:bg-gray-100 transition-colors duration-300"
               radius="full"
               size="lg"
             >
-              <ShoppingCart className="h-5 w-5" />
+              <Package className="h-5 w-5" />
             </Button>
           </div>
         </CardHeader>
         
         <CardBody className="p-6 md:p-8">
-          <h3 className="text-xl md:text-2xl font-bold text-primary-light mb-4 line-clamp-2">
+          <h3 className="text-xl md:text-2xl font-display font-bold text-primary-dark mb-4 line-clamp-2">
             {product.name}
           </h3>
           
-          <p className="text-primary-light/70 leading-relaxed text-base md:text-lg line-clamp-3 mb-6">
+          <p className="text-gray-600 leading-relaxed text-base md:text-lg line-clamp-3 mb-6 font-sans">
             {product.description}
           </p>
 
           <div className="flex justify-between items-center">
-            <div className="text-2xl md:text-3xl font-bold text-primary-light">
+            <div className="text-2xl md:text-3xl font-display font-bold text-accent">
               ₹{product.price}
             </div>
             <Button
-              className="bg-primary-light text-primary-dark font-semibold"
+              className="bg-accent text-white font-semibold hover:bg-accent-light transition-colors duration-300 font-sans"
               radius="full"
-              endContent={<ShoppingCart className="h-4 w-4" />}
+              endContent={<Package className="h-4 w-4" />}
             >
-              Add to Cart
+              View Details
             </Button>
           </div>
         </CardBody>

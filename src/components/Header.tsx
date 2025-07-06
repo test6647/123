@@ -59,11 +59,11 @@ const Header: React.FC = () => {
                 animate={{ rotate: scrolled ? 360 : 0 }}
                 transition={{ duration: 0.8 }}
               >
-                <Stethoscope className="h-8 md:h-10 w-8 md:w-10 text-primary-light" />
+                <Stethoscope className="h-8 md:h-10 w-8 md:w-10 text-accent" />
               </motion.div>
               <div>
-                <h1 className="text-xl md:text-2xl font-bold text-primary-light tracking-tight">VET_X PHARMA</h1>
-                <p className="text-xs text-primary-light/70 -mt-1 hidden md:block">Premium Veterinary Pharmaceuticals</p>
+                <h1 className="text-xl md:text-2xl font-display font-bold text-primary-light tracking-tight">VET_X PHARMA</h1>
+                <p className="text-xs text-primary-light/70 -mt-1 hidden md:block font-sans">Premium Veterinary Pharmaceuticals</p>
               </div>
             </div>
           </NavbarBrand>
@@ -80,7 +80,7 @@ const Header: React.FC = () => {
                 <Button
                   variant="light"
                   onPress={() => scrollToSection(item.id)}
-                  className="text-primary-light hover:text-primary-light/80 font-medium text-sm md:text-base"
+                  className="text-primary-light hover:text-accent font-medium text-sm md:text-base font-sans transition-colors duration-300"
                   radius="full"
                 >
                   {item.label}
@@ -109,7 +109,7 @@ const Header: React.FC = () => {
                       <Button
                         variant="light"
                         onPress={() => scrollToSection(item.id)}
-                        className="w-full text-primary-light hover:text-primary-light/80 font-medium text-lg justify-start"
+                        className="w-full text-primary-light hover:text-accent font-medium text-lg justify-start font-sans transition-colors duration-300"
                         radius="full"
                         size="lg"
                       >
